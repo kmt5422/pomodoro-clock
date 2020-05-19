@@ -1,0 +1,112 @@
+body {
+    width: 50%;
+    margin: 10rem auto 0 auto;
+    background-color: cornflowerblue;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.timer-settings {
+    background-color: white;
+    display: grid;
+    grid-template-areas:
+    "session session session break break break"
+    "s-minus s-time s-plus b-minus b-time b-plus";
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+.session-heading {
+    grid-area: session;
+}
+
+.btn-session-minus {
+    grid-area: s-minus;
+}
+
+.session-length {
+    grid-area: s-time;
+}
+
+.btn-session-plus {
+    grid-area: s-plus;
+}
+
+.break-heading {
+    grid-area: break;
+}
+
+.btn-break-minus {
+    grid-area: b-minus;
+}
+
+.break-length {
+    grid-area: b-time;
+}
+
+.btn-break-plus {
+    grid-area: b-plus;
+}
+
+.timer {
+    display: grid;
+    grid-template-areas: 
+    "play . . reset"
+    "session session session session"
+    "time time time time"
+    "time time time time"
+    "pause . . stop";
+    margin-top: 1rem;
+    background-color: white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.play {
+    grid-area: play;
+    justify-self: center;
+    align-self: center;
+    width: 70px;
+    height: 70px;
+}
+
+.reset {
+    grid-area: reset;
+    justify-self: center;
+    align-self: center;
+    width: 70px;
+    height: 70px;
+}
+
+.timer-session-heading {
+    grid-area: session;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.timer-time {
+    grid-area: time;
+    text-align: center;
+    font-size: 4rem;;
+}
+
+.pause {
+    grid-area: pause;
+    justify-self: center;
+    align-self: center;
+    width: 70px;
+    height: 70px;
+}
+
+.stop {
+    grid-area: stop;
+    justify-self: center;
+    align-self: center;
+    width: 70px;
+    height: 70px;
+}
