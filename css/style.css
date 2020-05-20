@@ -25,6 +25,10 @@ h1 {
     grid-area: session;
 }
 
+.btn:hover {
+    cursor: pointer;
+}
+
 .btn-session-minus {
     grid-area: s-minus;
 }
