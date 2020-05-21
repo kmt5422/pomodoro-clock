@@ -47,7 +47,9 @@
     resetBtn.addEventListener('click', () => {
         state.currSession = 'session';
         state.currState = 'pause';
-        time.minutes = Number(sessionLength.textContent);
+        time.minutes = 25;
+        sessionLength.textContent = 25;
+        breakLength.textContent = 5;
         time.seconds = 0;
         timerHeading.textContent = 'Session';
         updateTimerLength('minutes', 0);
@@ -64,7 +66,10 @@
     }
 
     function updateTimerLength(scale, value) {
-        if (scale == 'minutes') {
+        if (time.minutes == 0 && time.seconds == 0) {
+            stopBtn.click()
+            return;
+        }else if (scale == 'minutes') {
             time.minutes += value;
         } else if (scale == 'seconds') {
             if (time.seconds == 0) {
